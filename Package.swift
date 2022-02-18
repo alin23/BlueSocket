@@ -30,7 +30,7 @@ let libraryBuildInfo = BuildInfo(
         .library(
             name: "Socket",
             targets: ["Socket"]),
-        
+
             .library(
                 name: "BlueSocketTestCommonLibrary",
                 targets: ["BlueSocketTestCommonLibrary"]),
@@ -46,7 +46,7 @@ let libraryBuildInfo = BuildInfo(
             name: "SocketTests",
             dependencies: ["Socket", "BlueSocketTestCommonLibrary"]
         ),
-        
+
         .target(
             name: "BlueSocketTestCommonLibrary",
             dependencies: [ "Socket" ]
@@ -64,7 +64,7 @@ let toolsBuildInfo = BuildInfo(
             targets: ["BlueSocketTestClient"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "0.4.1"),
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
     ],
     targets: [
         .target(name: "BlueSocketTestServer",
